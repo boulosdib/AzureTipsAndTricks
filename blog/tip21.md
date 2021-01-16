@@ -2,17 +2,17 @@
 type: post
 title: "Tip 21 - Adding Extensions to Web Apps in Azure App Service"
 excerpt: "Learn how to work with extensions in Azure App Service"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Web]
 date: 2017-09-23 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [App Service Documentation](https://docs.microsoft.com/azure/app-service?WT.mc_id=docs-azuredevtips-micrum). 
+:bulb: Learn more : [App Service Documentation](https://docs.microsoft.com/azure/app-service?WT.mc_id=docs-azuredevtips-azureappsdev). 
 
-:tv: Watch the video : [How to Work with Extensions in Azure App Service](https://www.youtube.com/watch?v=Wy97gLq7xZU&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=17?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to Work with Extensions in Azure App Service](https://www.youtube.com/watch?v=Wy97gLq7xZU&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=17?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
 
-#### Adding Extensions to Web Apps in Azure App Service
+### Adding Extensions to Web Apps in Azure App Service
 
 We've recently created a [web app](https://microsoft.github.io/AzureTipsAndTricks/blog/tip19.html) and uploaded it to Azure App Service. We also took a look at [multiple ways](https://microsoft.github.io/AzureTipsAndTricks/blog/tip20.html) to examine those files through the Azure portal interface. In this post, we'll take a look at extensions that you can add to Azure app services to add additional functionality. 
 
@@ -47,5 +47,5 @@ You may be wondering what happened when we clicked on the Extension. Well, if we
 
 <img :src="$withBase('/files/webappext5.png')">
 
-**Source Code** The source code to the extension that we installed can be found [here](https://github.com/rajkumar-rangaraj/MAWSFileExplorer?WT.mc_id=github-azuredevtips-micrum)
+**Source Code** The source code to the extension that we installed can be found [here](https://github.com/rajkumar-rangaraj/MAWSFileExplorer?WT.mc_id=github-azuredevtips-azureappsdev)
 

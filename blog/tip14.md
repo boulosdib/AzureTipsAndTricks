@@ -2,17 +2,17 @@
 type: post
 title: "Tip 14 - Generate SSH public key to log into Linux VM with Cloud Shell"
 excerpt: "Learn how to generate SSH keys to log into a Linux VM with Cloud Shell and BASH on Windows 10"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Management and Governance, Virtual Machines]
 date: 2017-09-11 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [Overview of Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview?WT.mc_id=docs-azuredevtips-micrum).
+:bulb: Learn more : [Overview of Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview?WT.mc_id=docs-azuredevtips-azureappsdev).
 
-:tv: Watch the video : [How to generate SSH public key to log into Linux VM](https://www.youtube.com/watch?v=16bUZ43CGxs&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=12?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to generate SSH public key to log into Linux VM](https://www.youtube.com/watch?v=16bUZ43CGxs&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=12?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
 
-#### Generate SSH keys to log into Linux VM with Cloud Shell
+### Generate SSH keys to log into Linux VM with Cloud Shell
 
 For these instructions, I'll assume you have a Linux VM already setup and connecting via Cloud Shell. 
 

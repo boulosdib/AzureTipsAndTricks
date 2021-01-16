@@ -2,15 +2,15 @@
 type: post
 title: "Tip 76 - Uploading and Downloading a Stream into an Azure Storage Blob"
 excerpt: "Learn how to create to upload and download a stream into an Azure Storage Blob with C#"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Storage]
 date: 2018-01-09 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [Azure storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview?WT.mc_id=docs-azuredevtips-micrum).
+:bulb: Learn more : [Azure storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview?WT.mc_id=docs-azuredevtips-azureappsdev).
 :::
 
-#### Uploading and Downloading a Stream into an Azure Storage Blob
+### Uploading and Downloading a Stream into an Azure Storage Blob
 
 Azure Storage is described as a service that provides storages that is available, secure, durable, scalable, and redundant. Azure Storage consists of 1) Blob storage, 2) File Storage, and 3) Queue storage. In this post, we'll take a look at how to upload and download a stream into an Azure Storage Blob with C#. In previous [posts](tip74.html), I've described how to create an Azure Storage account through the Portal and [recently](tip75.html) how to create an Azure Storage Blob Container through C#.
 
@@ -23,17 +23,16 @@ Now that we've created the Azure Storage Blob Container, we'll upload a file to 
 ```csharp
 static void Main(string[] args)
 {
-    var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnection"));
-    var myClient = storageAccount.CreateCloudBlobClient();
-    var container = myClient.GetContainerReference("images-backup");
-    container.CreateIfNotExists(BlobContainerPublicAccessType.Blob);
+    string connectionString = CloudConfigurationManager.GetSetting("StorageConnection");
+    BlobContainerClient container = new BlobContainerClient(connectionString, "images-backup");
+    container.CreateIfNotExists(PublicAccessType.Blob);
 
 //lines modified
-    var blockBlob = container.GetBlockBlobReference("mikepic.png");
-      using (var fileStream = System.IO.File.OpenRead(@"c:\mikepic.png"))
-      {
-         blockBlob.UploadFromStream(fileStream);
-      }
+    var blockBlob = container.GetBlobClient("mikepic.png");
+    using (var fileStream = System.IO.File.OpenRead(@"c:\mikepic.png"))
+    {
+        blockBlob.Upload(fileStream);
+    }
 //lines modified
 
     Console.ReadLine();
@@ -51,16 +50,15 @@ Now that we've uploaded a file to the Azure Storage Blob Container, we'll downlo
 ```csharp
 static void Main(string[] args)
 {
-    var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnection"));
-    var myClient = storageAccount.CreateCloudBlobClient();
-    var container = myClient.GetContainerReference("images-backup");
-    container.CreateIfNotExists(BlobContainerPublicAccessType.Blob);
+    string connectionString = CloudConfigurationManager.GetSetting("StorageConnection");
+    BlobContainerClient container = new BlobContainerClient(connectionString, "images-backup");
+    container.CreateIfNotExists(PublicAccessType.Blob);
 
 //lines modified
-    var blockBlob = container.GetBlockBlobReference("mikepic.png");
+    var blockBlob = container.GetBlobClient("mikepic.png");
     using (var fileStream = System.IO.File.OpenWrite(@"C:\Users\mbcrump\Downloads\mikepic-backup.png"))
     {
-      blockBlob.DownloadToStream(fileStream);
+      blockBlob.DownloadTo(fileStream);
     }
 //lines modified
 
@@ -68,6 +66,6 @@ static void Main(string[] args)
 }
 ```
 
-Note that are now using the **OpenWrite** method and specifying a new name. We are also taking advantage of the **DownloadToStream** method. If we run the application, our new file should be in the downloads folder.
+Note that are now using the **OpenWrite** method and specifying a new name. We are also taking advantage of the **DownloadTo** method. If we run the application, our new file should be in the downloads folder.
 
 <img :src="$withBase('/files/writetoblob2.png')">

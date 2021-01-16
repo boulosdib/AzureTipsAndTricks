@@ -2,15 +2,17 @@
 type: post
 title: "Tip 24 - Add logic to your Testing in Production sites with PowerShell"
 excerpt: "Learn how to use additional logic in your Testing in Production sites with PowerShell and the CLI"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Languages & Frameworks]
 date: 2017-09-26 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [Overview of Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?WT.mc_id=docs-azuredevtips-micrum). 
+:bulb: Learn more : [Overview of Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?WT.mc_id=docs-azuredevtips-azureappsdev). 
 
-:tv: Watch the video : [How to Add Logic to Your Testing in Production Sites with PowerShell](https://www.youtube.com/watch?v=laAwhwahb5I&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=38?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to Add Logic to Your Testing in Production Sites with PowerShell](https://www.youtube.com/watch?v=laAwhwahb5I&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=38?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
+
+### Add logic to your Testing in Production sites with PowerShell
 
 #### Intro
 

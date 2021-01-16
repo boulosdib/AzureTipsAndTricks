@@ -2,17 +2,17 @@
 type: post
 title: "Tip 20 - Working with Files in Azure App Service"
 excerpt: "Learn how to work with files that you've uploaded to Azure App Service"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Web]
 date: 2017-09-21 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [App Service Documentation](https://docs.microsoft.com/azure/app-service?WT.mc_id=docs-azuredevtips-micrum). 
+:bulb: Learn more : [App Service Documentation](https://docs.microsoft.com/azure/app-service?WT.mc_id=docs-azuredevtips-azureappsdev). 
 
-:tv: Watch the video : [How to Work with Files in Azure App Service](https://www.youtube.com/watch?v=igLj2WlVQ9M&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=16?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to Work with Files in Azure App Service](https://www.youtube.com/watch?v=igLj2WlVQ9M&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=16?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
 
-#### Working with Files in Azure App Service
+### Working with Files in Azure App Service
 In the [Tip 19 - Deploy an Azure Web App using only the CLI](tip19.html), we created a web app and uploaded it to Azure App Service. In this post, we'll take a look at the files uploaded and three tools that I use to work with them
 
 ##### Console Access to my App Service
@@ -23,7 +23,7 @@ I can go to the Azure Portal and select my App Service and click on **Console** 
 
 As you can tell from the screen-shot, I start in `D:\home\site\wwwroot`. I can type `dir` to see a current directory listing. 
 
-```text
+```
 
 Volume in drive D is Windows
  Volume Serial Number is FE33-4717

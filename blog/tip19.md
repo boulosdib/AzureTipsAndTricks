@@ -2,17 +2,17 @@
 type: post
 title: "Tip 19 - Deploy an Azure Web App using only the CLI"
 excerpt: "Learn how to deploy an Azure Web App using only the CLI tools from scratch"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Web, Management and Governance]
 date: 2017-09-20 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [Azure Command-Line Interface (CLI)](https://docs.microsoft.com/cli/azure?WT.mc_id=docs-azuredevtips-micrum). 
+:bulb: Learn more : [Azure Command-Line Interface (CLI)](https://docs.microsoft.com/cli/azure?WT.mc_id=docs-azuredevtips-azureappsdev). 
 
-:tv: Watch the video : [How to deploy an Azure Web App using only the CLI tool](https://www.youtube.com/watch?v=lO5Dvde07Tg&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=15?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to deploy an Azure Web App using only the CLI tool](https://www.youtube.com/watch?v=lO5Dvde07Tg&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=15?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
 
-#### Deploy an Azure Web App using only the CLI
+### Deploy an Azure Web App using only the CLI
 While I love working with the Azure Portal or even Visual Studio, it is sometimes nice to do everything from the command line. While I'm a power Windows user, in this tutorial I'll be using a Linux VM and BASH to do everything. 
 
 Step 1) Ensure you have the following stack installed. 
@@ -35,14 +35,14 @@ db version v2.6.10
 2017-09-20T20:11:43.095+0000 OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
 ```
 
-I'm particularly interested in the [MEAN.JS](https://github.com/meanjs/mean?WT.mc_id=github-azuredevtips-micrum) stack. 
+I'm particularly interested in the [MEAN.JS](https://github.com/meanjs/mean?WT.mc_id=github-azuredevtips-azureappsdev) stack. 
 
 **What is MEAN.JS?** MEAN.JS is a Full-Stack JavaScript Using MongoDB, Express, AngularJS, and Node.js -
 
 
 Step 2) Create a folder such as `webapp` and then `cd webapp`. 
 
-Step 3) Run the following command `git clone https://github.com/crpietschmann/jsQuizEngine.git`. This is a JavaScript based quiz engine by [Chris Pietschmann](https://github.com/crpietschmann?WT.mc_id=github-azuredevtips-micrum). 
+Step 3) Run the following command `git clone https://github.com/crpietschmann/jsQuizEngine.git`. This is a JavaScript based quiz engine by [Chris Pietschmann](https://github.com/crpietschmann?WT.mc_id=github-azuredevtips-azureappsdev). 
 
 Step 4) Change your working directory to `jsQuizEngine/src` and now we'll need to create a deployment user that can deploy web app through Git. 
 

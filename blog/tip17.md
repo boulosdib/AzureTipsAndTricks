@@ -2,16 +2,16 @@
 type: post
 title: "Tip 17 - Use PowerShell with Azure Cloud Shell"
 excerpt: "Learn how to take advantage of PowerShell within Azure Cloud Shell"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Languages & Frameworks]
 date: 2017-09-18 17:00:00
 ---
 
-#### Use PowerShell within Azure Cloud Shell
+### Use PowerShell within Azure Cloud Shell
 
 
 <img :src="$withBase('/files/bashscreenshot.png')">
 
-**PowerShell** is the other command language that the Azure Cloud Shell supports. I've recently [signed up for a preview](https://aka.ms/PSCloudSignup?WT.mc_id=akams-azuredevtips-micrum) and thought I'd share.  
+**PowerShell** is the other command language that the Azure Cloud Shell supports. I've recently [signed up for a preview](https://aka.ms/PSCloudSignup?WT.mc_id=akams-azuredevtips-azureappsdev) and thought I'd share.  
 
 You can switch to PowerShell by clicking the dropdown and selecting PowerShell. 
 
@@ -58,7 +58,7 @@ Directory: Azure:\Demo - Azure Monitoring\VirtualMachines
 
 As you can tell, I can easily discover and navigate Azure resources now by using Powershell. 
 
-The other nice thing that I've seen while playing with PowerShell is the ability to run modules such as the ones found in Microsoft.PowerShell. For instance we can use `Get-Date` as described [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1?WT.mc_id=docs-azuredevtips-micrum) inside of Cloud Shell. 
+The other nice thing that I've seen while playing with PowerShell is the ability to run modules such as the ones found in Microsoft.PowerShell. For instance we can use `Get-Date` as described [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1?WT.mc_id=docs-azuredevtips-azureappsdev) inside of Cloud Shell. 
 
 	PS Azure:\> Get-Date
 	

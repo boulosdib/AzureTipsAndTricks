@@ -2,15 +2,17 @@
 type: post
 title: "Tip 22 - Deployment Slots for Web Apps using Azure App Service"
 excerpt: "Learn how to use Deployment Slots for Web Apps using Azure App Service"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Web]
 date: 2017-09-24 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [App Service Documentation](https://docs.microsoft.com/azure/app-service?WT.mc_id=docs-azuredevtips-micrum). 
+:bulb: Learn more : [App Service Documentation](https://docs.microsoft.com/azure/app-service?WT.mc_id=docs-azuredevtips-azureappsdev). 
 
-:tv: Watch the video : [How to use deployment slots for web applications](https://youtu.be/cavW-t4rItY?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to use deployment slots for web applications](https://youtu.be/cavW-t4rItY?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
+
+### Deployment Slots for Web Apps using Azure App Service
 
 #### Test Web Apps in Production with Azure App Service
 

@@ -2,17 +2,17 @@
 type: post
 title: "Tip 35 - Work with the Azure Functions File System using the Console"
 excerpt: "Learn how to quickly rename Azure functions using the Azure Portal Console"
-tags: [azure, windows, portal, cloud, developers, tipsandtricks]
+tags: [Serverless]
 date: 2017-10-17 17:00:00
 ---
 
 ::: tip
-:bulb: Learn more : [Azure Functions Documentation](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=docs-azuredevtips-micrum).
+:bulb: Learn more : [Azure Functions Documentation](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=docs-azuredevtips-azureappsdev).
 
-:tv: Watch the video : [How to work with the Azure Functions File System](https://www.youtube.com/watch?v=IoKkdVCvpNc&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=29?WT.mc_id=youtube-azuredevtips-micrum).
+:tv: Watch the video : [How to work with the Azure Functions File System](https://www.youtube.com/watch?v=IoKkdVCvpNc&list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC&index=29?WT.mc_id=youtube-azuredevtips-azureappsdev).
 :::
 
-#### Work with the Azure Functions File System using the Console
+### Work with the Azure Functions File System using the Console
 
 I debated writing this one, but have seen a lot of folks struggling with files and folders while using Azure Functions. The most common question being, "How do I rename my Function?" as shown below.
 
@@ -22,9 +22,9 @@ My preferred method for this type of task is working with the Azure Portal Conso
 
 <img :src="$withBase('/files/azfunc2.png')">
 
-Now that we have a **Command Prompt**, we should see the following: 
+Now that we have a **Command Prompt**, we should see the following:
 
-```text
+```
 > dir
 D:\home\site\wwwroot
 Volume in drive D is Windows
@@ -45,6 +45,6 @@ We will rename the **TimerTriggerCSharp1** to something more meaningful by typin
 
 `ren TimerTriggerCharp1 MyAwesomeNewTriggerName`
 
-You'll need to refresh the Azure Portal and you can see that the name changed. 
+You'll need to refresh the Azure Portal and you can see that the name changed.
 
 <img :src="$withBase('/files/azfunc3.png')">

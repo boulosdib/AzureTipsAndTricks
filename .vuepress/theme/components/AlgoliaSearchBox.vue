@@ -2,20 +2,41 @@
   <form
     id="search-form"
     class="algolia-search-wrapper search-box"
+    role="search"
   >
     <input
       id="algolia-search-input"
       class="search-query"
+      :placeholder="placeholder"
     >
   </form>
 </template>
 
 <script>
 export default {
+  name: 'AlgoliaSearchBox',
+
   props: ['options'],
+
+  data () {
+    return {
+      placeholder: undefined
+    }
+  },
+
+  watch: {
+    $lang (newValue) {
+      this.update(this.options, newValue)
+    },
+
+    options (newValue) {
+      this.update(newValue, this.$lang)
+    }
+  },
 
   mounted () {
     this.initialize(this.options, this.$lang)
+    this.placeholder = this.$site.themeConfig.searchPlaceholder || ''
   },
 
   methods: {
@@ -33,8 +54,15 @@ export default {
             inputSelector: '#algolia-search-input',
             // #697 Make docsearch work well at i18n mode.
             algoliaOptions: Object.assign({
-              'facetFilters': [`lang:${lang}`].concat(algoliaOptions.facetFilters || [])
-            }, algoliaOptions)
+              'facetFilters': [`lang:${lang}`].concat(algoliaOptions.facetFilters || []),
+              'hitsPerPage': userOptions.hitsPerPage
+            }, algoliaOptions),
+            handleSelected: (input, event, suggestion) => {
+              const { pathname, hash } = new URL(suggestion.url)
+              const routepath = pathname.replace(this.$site.base, '/')
+              const _hash = decodeURIComponent(hash)
+              this.$router.push(`${routepath}${_hash}`)
+            }
           }
         ))
       })
@@ -44,23 +72,11 @@ export default {
       this.$el.innerHTML = '<input id="algolia-search-input" class="search-query">'
       this.initialize(options, lang)
     }
-  },
-
-  watch: {
-    $lang (newValue) {
-      this.update(this.options, newValue)
-    },
-
-    options (newValue) {
-      this.update(newValue, this.$lang)
-    }
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../styles/config.styl'
-
 .algolia-search-wrapper
   & > span
     vertical-align middle
@@ -68,6 +84,8 @@ export default {
     line-height normal
     .ds-dropdown-menu
       background-color #fff
+      height 400px
+      overflow-y scroll
       border 1px solid #999
       border-radius 4px
       font-size 16px
